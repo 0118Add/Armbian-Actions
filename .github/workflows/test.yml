@@ -232,15 +232,3 @@ jobs:
           duration=$(( $(date -d "$end_time" +%s) - $(date -d "$start_time" +%s) ))
           echo "Workflow duration: ${duration} seconds"
           echo "DURATION=${duration}" >> $GITHUB_ENV
-
-      - name: Telegram notification
-        run: |
-          HOURS=$(( ${{ env.DURATION }} / 3600 ))
-          MINUTES=$(( (${{ env.DURATION }} % 3600) / 60 ))
-          SECONDS=$(( ${{ env.DURATION }} % 60 ))
-          MSG="
-          ${{ env.KERNEL_VERSION }}-${{ env.LINUX_FAMILY }} 编译完成！
-          耗时: ${HOURS} 时 ${MINUTES} 分 ${SECONDS} 秒
-          "
-          echo "Sending message: $MSG"
-          curl -s "https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage" -d "chat_id=${{ secrets.TELEGRAM_TO }}&text=${MSG}"
