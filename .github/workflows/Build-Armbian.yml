@@ -1,4 +1,4 @@
-name: Build Armbian
+name: BuildArmbian
 
 on:
   workflow_dispatch:
