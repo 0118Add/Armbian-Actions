@@ -1,4 +1,4 @@
-name: Build Kernel LinuxFamilyPR
+name: Build Kernel LinuxFamily PR
 
 on:
   workflow_dispatch:
