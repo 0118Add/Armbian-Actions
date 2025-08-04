@@ -1,4 +1,4 @@
-name: Build Armbian Kernel Debs
+name: Build Armbian KernelDebs
 
 on:
   workflow_dispatch:
