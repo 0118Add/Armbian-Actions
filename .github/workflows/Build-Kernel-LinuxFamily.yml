@@ -1,4 +1,4 @@
-name: BuildKernel LinuxFamily
+name: Build Kernel LinuxFamily
 
 on:
   workflow_dispatch:
