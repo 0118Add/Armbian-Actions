@@ -62,9 +62,7 @@ merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/v2r
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/shadowsocks-rust
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/xray-core
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/shadow-tls
-merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-homeproxy
-merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-nikki
-merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/nikki
+git clone -b dev --depth 1 https://github.com/vernesong/OpenClash package/openclash
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
