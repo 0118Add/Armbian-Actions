@@ -63,12 +63,3 @@ sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
 
 # 替换默认主题 luci-theme-argon
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
-
-# 修改时区 UTF-8
-sed -i 's/UTC/CST-8/g'  package/base-files/files/bin/config_generate
-
-# 时区
-sed -i 's/time1.apple.com/time1.cloud.tencent.com/g'  package/base-files/files/bin/config_generate
-sed -i 's/time1.google.com/ntp.aliyun.com/g'  package/base-files/files/bin/config_generate
-sed -i 's/time.cloudflare.com/cn.ntp.org.cn/g'  package/base-files/files/bin/config_generate
-sed -i 's/pool.ntp.org/cn.pool.ntp.org/g'  package/base-files/files/bin/config_generate
