@@ -74,7 +74,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 sed -i 's/UTC/CST-8/g'  package/base-files/files/bin/config_generate
 
 # 修改主机名 OP
-2mtcsed -i 's/ImmortalWrt/OpenWrt/g'  package/base-files/files/bin/config_generate
+#sed -i 's/ImmortalWrt/OpenWrt/g'  package/base-files/files/bin/config_generate
 
 # 时区
 sed -i 's/time1.apple.com/time1.cloud.tencent.com/g'  package/base-files/files/bin/config_generate
