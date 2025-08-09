@@ -51,8 +51,6 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-qbittorrent
 #rm -rf feeds/luci/applications/luci-app-openclash
 rm -rf feeds/packages/net/{chinadns-ng,hysteria,xray-core,v2ray-core,v2ray-geodata,sing-box,shadowsocks-rust,shadowsocksr-libev}
-merge_package https://github.com/kiddin9/openwrt-packages openwrt-packages/lua-maxminddb
-merge_package https://github.com/kiddin9/openwrt-packages openwrt-packages/luci-app-smartdns
 #git clone https://github.com/0118Add/luci-app-vssr package/luci-app-vssr
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/sing-box
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/tuic-client
@@ -64,14 +62,10 @@ merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/v2r
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/shadowsocks-rust
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/xray-core
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/shadow-tls
-merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-ssr-plus
-merge_package https://github.com/kiddin9/openwrt-packages openwrt-packages/luci-app-bypass
+merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-homeproxy
+merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-nikki
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-sed -i 's/ShadowSocksR Plus+/SSR Plus+/g' package/custom/luci-app-ssr-plus/luasrc/controller/shadowsocksr.lua
-
-# 去掉ssr+中shadowsocksr-libev的libopenssl-legacy依赖支持
-sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
 
 # 替换默认主题 luci-theme-argon
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
@@ -80,16 +74,10 @@ sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
 sed -i 's/UTC/CST-8/g'  package/base-files/files/bin/config_generate
 
 # 修改主机名 OP
-sed -i 's/ImmortalWrt/OpenWrt/g'  package/base-files/files/bin/config_generate
+2mtcsed -i 's/ImmortalWrt/OpenWrt/g'  package/base-files/files/bin/config_generate
 
 # 时区
 sed -i 's/time1.apple.com/time1.cloud.tencent.com/g'  package/base-files/files/bin/config_generate
 sed -i 's/time1.google.com/ntp.aliyun.com/g'  package/base-files/files/bin/config_generate
 sed -i 's/time.cloudflare.com/cn.ntp.org.cn/g'  package/base-files/files/bin/config_generate
 sed -i 's/pool.ntp.org/cn.pool.ntp.org/g'  package/base-files/files/bin/config_generate
-
-# 修改权限
-chmod 0755 package/custom/luci-app-bypass/root/etc/init.d/bypass
-
-# 替换源 
-sed -i 's,mirrors.vsean.net/openwrt,mirrors.pku.edu.cn/immortalwrt,g'  package/emortal/default-settings/files/99-default-settings-chinese
