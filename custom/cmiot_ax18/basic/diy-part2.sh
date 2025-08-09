@@ -64,6 +64,7 @@ merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/xra
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/shadow-tls
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-homeproxy
 merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/luci-app-nikki
+merge_package https://github.com/sbwml/openwrt_helloworld openwrt_helloworld/nikki
 git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
@@ -72,6 +73,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 
 # 修改时区 UTF-8
 sed -i 's/UTC/CST-8/g'  package/base-files/files/bin/config_generate
+
+# 去掉ssr+中shadowsocksr-libev的libopenssl-legacy依赖支持
+sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
 
 # 修改主机名 OP
 #sed -i 's/ImmortalWrt/OpenWrt/g'  package/base-files/files/bin/config_generate
