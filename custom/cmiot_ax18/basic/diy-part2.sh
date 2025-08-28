@@ -21,3 +21,4 @@ rm -rf feeds/luci/applications/luci-app-ssr-plus
 rm -rf feeds/luci/applications/luci-app-openclash
 
 git clone -b dev --depth 1 https://github.com/vernesong/OpenClash package/OpenClash
+git clone https://github.com/sirpdboy/luci-app-ddns-go package/luci-app-ddns-go
