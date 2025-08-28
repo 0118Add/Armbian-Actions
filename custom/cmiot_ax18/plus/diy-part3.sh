@@ -14,7 +14,7 @@
 sed -i 's/192.168.1.1/10.0.0.10/g' package/base-files/files/bin/config_generate
 
 # 添加删除软件
-rm -rf feeds/packages/net/{chinadns-ng,hysteria,xray-core,v2ray-core,v2ray-geodata,sing-box,shadowsocks-rust,shadowsocksr-libev}
+rm -rf feeds/packages/net/{ddns-go,chinadns-ng,hysteria,xray-core,v2ray-core,v2ray-geodata,sing-box,shadowsocks-rust,shadowsocksr-libev}
 rm -rf feeds/luci/applications/luci-app-ddns-go
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/luci/applications/luci-app-passwall
