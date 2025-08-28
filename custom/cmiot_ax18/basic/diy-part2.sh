@@ -21,5 +21,3 @@ rm -rf feeds/luci/applications/luci-app-ssr-plus
 rm -rf feeds/luci/applications/luci-app-openclash
 
 git clone -b dev --depth 1 https://github.com/vernesong/OpenClash package/OpenClash
-#git clone https://github.com/nikkinikki-org/OpenWrt-nikki  package/OpenWrt-nikki
-git clone https://github.com/nikkinikki-org/OpenWrt-momo  package/OpenWrt-momo
