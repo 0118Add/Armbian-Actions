@@ -48,7 +48,7 @@ git clone -b dev --depth 1 https://github.com/vernesong/OpenClash package/OpenCl
 git clone https://github.com/nikkinikki-org/OpenWrt-nikki  package/OpenWrt-nikki
 
 # 去掉ssr+中shadowsocksr-libev的libopenssl-legacy依赖支持
-sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
+#sed -i 's/ +libopenssl-legacy//g' package/custom/shadowsocksr-libev/Makefile
 
 # 替换默认主题 luci-theme-argon
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/' feeds/luci/collections/luci/Makefile
