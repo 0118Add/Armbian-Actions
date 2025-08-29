@@ -20,7 +20,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/360_t7_24.10-5.4.config
   DIY_P1_SH: custom/cmiot_ax18/plus/diy-part1.sh
-  DIY_P2_SH: custom/cmiot_ax18/plus/diy-part3.sh
+  DIY_P2_SH: custom/cmiot_ax18/plus/diy-part4.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
