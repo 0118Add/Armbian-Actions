@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/8688Add/ipq6000.git
+  REPO_URL: https://github.com/LiBwrt/openwrt-6.x
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/qihoo_360v6/qihoo_360v6_basic.config
