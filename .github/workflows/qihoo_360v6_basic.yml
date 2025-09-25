@@ -30,7 +30,7 @@ env:
   CACHE_TOOLCHAIN: false
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: qihoo_360v6
+  FIRMWARE_TAG: IPQ60XX-24.10-6.12-WIFI
   TZ: Asia/Shanghai
 
 jobs:
