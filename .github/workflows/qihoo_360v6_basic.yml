@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x
-  REPO_BRANCH: k6.12-nss
+  REPO_BRANCH: 24.10-6.12
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/qihoo_360v6/qihoo_360v6_basic.config
   DIY_P1_SH: custom/qihoo_360v6/basic/diy-part1.sh
