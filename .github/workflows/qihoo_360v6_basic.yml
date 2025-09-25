@@ -24,13 +24,12 @@ env:
   REPO_BRANCH: k6.12-nss
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/qihoo_360v6/qihoo_360v6_basic.config
-  DIY_P1_SH: custom/qihoo_360v6/basic/diy-part1.sh
-  DIY_P2_SH: custom/qihoo_360v6/basic/diy-part2.sh
+  DIY_SCRIPT: custom/qihoo_360v6/basic/diy-part2.sh
   CLASH_KERNEL: amd64
-  CACHE_TOOLCHAIN: false
+  CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
   FIRMWARE_RELEASE: true
-  FIRMWARE_TAG: IPQ60XX-24.10-6.12-WIFI
+  FIRMWARE_TAG: IPQ60XX-6.12-WIFI
   TZ: Asia/Shanghai
 
 jobs:
